@@ -1,3 +1,6 @@
+import About from "@/components/LandingPage/About";
+import AllYouNeedToKnow from "@/components/LandingPage/AllYouNeedToKnow";
+import BecomeAnAgent from "@/components/LandingPage/BecomeAnAgent";
 import CountriesWeOperate from "@/components/LandingPage/CountriesWeOperate";
 import HeroSection from "@/components/LandingPage/HeroSection";
 import HowItWorks from "@/components/LandingPage/HowItWorks";
@@ -14,13 +17,16 @@ export default function LandingPage() {
       <Navabar />
       <div className="h-[var(--navbar-height)]" />
       <HeroSection />
-      <CountriesWeOperate />
+      <About />
+      {/* <CountriesWeOperate /> */}
       <HowItWorks />
-      <WhySurroSantara />
-      <HowSurroWorks />
+      <BecomeAnAgent />
+      {/* <WhySurroSantara /> */}
+      {/* <HowSurroWorks /> */}
       <Pricing />
       <Testimonals />
-      <Footer />
+      <AllYouNeedToKnow />
+      {/* <Footer />  */}
     </main>
   );
 }

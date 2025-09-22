@@ -6,35 +6,27 @@ import React from "react";
 interface Props {
   step: number;
   title: string;
+  desc: string;
 }
 
 const StepCard = (props: Props) => {
   return (
-    <div className="border border-[#EBF4FE] rounded-[8px] w-full lg:w-fit p-5 grid grid-cols-2 gap-5">
-      <div className="flex flex-col justify-between">
-        <div className="bg-[#EBF4FE] w-fit text-[#163C63] text-[12px] px-3 py-1 rounded-[10px]">
-          Step {props.step}
-        </div>
-        <p className="text-[#163C63] text-[32px] font-semibold leading-[120%]">
+    <div className="p-[30px] pr-0 pb-0 bg-[#FBF8FD] rounded-[30px]">
+      <div className="mb-5 pr-[30px]">
+        <h4 className="text-[20px] lg:text-[32px] text-[#080833] ">
           {props.title}
+        </h4>
+        <p className="text-[16px] lg:text-[24px] text-[#9E9E9E]">
+          {props.desc}
         </p>
-        <p className="text-[#212121] text-[15px]">
-          Dorem ipsum dolor sit amet, consectetur adipiscing elit. Nunc
-          vulputate libero et velit interdum, ac aliquet odio mattis.
-        </p>
-        <Link href="/">
-          <p className="border-b border-[#2D75C3] w-fit flex items-center gap-2text-[#163C63] text-[15px]">
-            Read more <ArrowRight size={17} color="#2D75C3" />
-          </p>
-        </Link>
       </div>
-      <div>
+
+      <div className="w-full flex justify-end">
         <Image
-          src={"/images/works.svg"}
+          src={`/images/number${props.step}.svg`}
           alt=""
-          width={300}
-          height={300}
-          className="w-[320px] h-[330px]"
+          width={100}
+          height={500}
         />
       </div>
     </div>

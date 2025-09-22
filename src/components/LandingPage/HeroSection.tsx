@@ -6,119 +6,50 @@ import Image from "next/image";
 
 const HeroSection = () => {
   return (
-    <div>
-      <div className="lg:grid grid-cols-2 items-center px-10 lg:pl-[100px] gap-10 mt-10 lg:mt-30">
-        <div className="mb-10">
-          <h1 className="text-[48px] lg:text-[72px] font-bold  bg-gradient-to-r from-[#012770] via-[#3651BB] to-[#6C6CD3] bg-clip-text text-transparent leading-20">
-            Connecting Intended Parents with Verified Surrogates{" "}
-          </h1>
-          <p className="text-[#212121] text-[24px] mt-3 w-[90%]">
-            Building trust in surrogacy around the world safely, transparently,
-            affordably and efficiently and Fast
-          </p>
-
-          <div className="space-x-5 mt-5">
-            <Button className="bg-primary text-info h-[45px] text-[18px]">
-              Get started
-            </Button>
-            <Button className="bg-info text-primary h-[45px] text-[18px] hover:bg-info">
-              Learn How It Works
-            </Button>
-          </div>
-
-          <div className="mt-5 flex items-center gap-2">
-            <div className="flex -space-x-3">
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/shadcn.png"
-                  alt="@shadcn"
-                />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/shadcn.png"
-                  alt="@shadcn"
-                />
-                <AvatarFallback>CN</AvatarFallback>
-              </Avatar>
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/leerob.png"
-                  alt="@leerob"
-                />
-                <AvatarFallback>LR</AvatarFallback>
-              </Avatar>
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/leerob.png"
-                  alt="@leerob"
-                />
-                <AvatarFallback>LR</AvatarFallback>
-              </Avatar>
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/leerob.png"
-                  alt="@leerob"
-                />
-                <AvatarFallback>LR</AvatarFallback>
-              </Avatar>
-              <Avatar className="size-[40px] border border-white">
-                <AvatarImage
-                  src="https://github.com/evilrabbit.png"
-                  alt="@evilrabbit"
-                />
-                <AvatarFallback>ER</AvatarFallback>
-              </Avatar>
-            </div>
-
-            <div>
-              <div className="flex items-center gap-1">
-                {Array.from({ length: 5 }, (_, index) => (
-                  <Star key={index} fill="#FFC600" color="#FFC600" size={13} />
-                ))}
-              </div>
-
-              <p className="text-[10px] font-[400]">from 70+ happy customers</p>
+    <div className="bg-white p-5 h-[calc(100vh-10vh)]">
+      <div className="header-background  rounded-[40px] p-5 h-full">
+        <div className="flex flex-col items-center justify-between h-full">
+          <div className="lg:w-[580px] h-full flex flex-col items-center justify-center space-y-5">
+            <h1 className="text-[32px] md:text-[72px] text-[#464646] font-normal leading-[100%] text-center">
+              Bringing Dreams of Parenthood to Life.
+            </h1>
+            <p className="text-[#9E9E9E] text-[24px] text-center">
+              We connect loving parents with caring surrogates. Because every
+              family deserves a chance to grow.
+            </p>
+            <div className="lg:flex gap-5 items-center justify-center w-full lg:w-fit mt-5 space-y-5 lg:space-y-0">
+              <Button className="bg-gradient-to-r rounded-[100px] from-[#012770] via-[#3651BB] to-[#6C6CD3] text-white h-[45px] text-[13px] font-semibold w-full">
+                Find a Surrogate
+              </Button>
+              <Button className="border border-[#E7E7EE] rounded-[100px] h-[45px] text-[13px] font-semibold bg-transparent hover:bg-white w-full">
+                <p className="bg-gradient-to-r from-[#6C6CD3] to-[#092D7B] bg-clip-text text-transparent">
+                  Become a Surrogate
+                </p>
+              </Button>
             </div>
           </div>
-        </div>
-
-        <div className="hidden lg:flex h-[300px] self-end w-fit bg-gradient-to-r from-[#3651BB] from-20% to-[#6C6CD3]">
-          <Image
-            src={"/images/mother 1.svg"}
-            alt=""
-            width={200}
-            height={200}
-            className="-mt-30"
-          />
-          <div className="-mt-[13rem]">
+          <div className="grid grid-cols-3 gap-5 mt-10">
             <Image
-              src={"/images/mother 2.svg"}
+              src="/images/mother-breastfeeding.svg"
               alt=""
-              width={200}
-              height={200}
-              //   className="-mt-30"
+              width={500}
+              height={500}
             />
             <Image
-              src={"/images/mother 3.svg"}
+              src="/images/pregnant-mother.svg"
               alt=""
-              width={200}
-              height={200}
-              className="-mt-[10rem]"
+              width={500}
+              height={500}
+            />
+            <Image
+              src="/images/pregnant-mother-with-child.svg"
+              alt=""
+              width={500}
+              height={500}
             />
           </div>
-          <Image
-            src={"/images/mother 4.svg"}
-            alt=""
-            width={200}
-            height={200}
-            className="-mt-30"
-          />
         </div>
       </div>
-
-      <div className="bg-gradient-to-r from-[#012770] via-[#3651BB] to-[#6C6CD3] h-[150px]" />
     </div>
   );
 };
