@@ -146,3 +146,7 @@ button {
   border-radius: 0.85rem;
   z-index: -1;
 } */
+
+.header-background {
+  background: radial-gradient(circle at center, #ffffff, #f5ddff, #cdcdfb);
+}

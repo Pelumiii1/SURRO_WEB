@@ -1,128 +1,121 @@
 "use client";
 
-import { Dot, Star } from "lucide-react";
+import { CircleCheckBig, Dot, Star } from "lucide-react";
 import React from "react";
-import PriceCard from "./PriceCard";
-import { Avatar, AvatarFallback, AvatarImage } from "../ui/avatar";
+import GradientButton from "./Common/GradientButton";
 
 const Pricing = () => {
   const [active, setActive] = React.useState(0);
 
   return (
-    <div className="flex flex-col items-center my-[10rem]">
-      <h1 className="text-[48px] font-bold">Transparent Pricing Plans</h1>
+    <div className="p-5 lg:p-10 my-[2rem]">
+      <h1 className="text-[48px] font-[400] text-[#464646] leading-[120%] lg:text-center">
+        An investment for your dream child
+      </h1>
+      <p className="text-[#9E9E9E] text-[16px] lg:text-[24px] text-left lg:text-center lg:w-[30%] lg:mx-auto">
+        We understand that this isn’t just a service, it’s your future family
+      </p>
 
-      <div className="text-[#163C63] text-[15px] flex gap-3 items-center my-5">
-        <div className="bg-gradient-to-r from-[#FFFFFF] from-20% to-[#FCDF78] rounded-[12px] w-fit py-1 px-3">
-          One-time purchase
-        </div>
-        <Dot color="#C56A1D" />
-        <div className="bg-gradient-to-r from-[#FFFFFF] from-20% to-[#FCDF78] rounded-[12px] w-fit py-1 px-3">
-          All the features in every plane
-        </div>
-        <Dot color="#C56A1D" />
-        <div className="bg-gradient-to-r from-[#FFFFFF] from-20% to-[#FCDF78] rounded-[12px] w-fit py-1 px-3">
-          30-day Money Back Guarantee
-        </div>
-      </div>
+      <div className="grid lg:grid-cols-3 gap-5 mt-5 items-center">
+        {/* Starter plan */}
+        <div className="bg-[#FBF8FD] rounded-[30px] p-[20px] lg:p-[30px] h-fit">
+          <div className="text-[#080833] text-[16px] bg-gradient-to-r from-[#CDCDFB] to-[#F5DDFF] w-fit rounded-[14px] py-3 px-5">
+            Starter Plan
+          </div>
+          <p className="my-2 text-[#5E5E8D] text-[13px] lg:text-[16px]">
+            For mothers just beginning the journey
+          </p>
+          <p className="text-[#080833] text-[32px] lg:text-[64px] font-[500]">
+            $499/year
+          </p>
 
-      <div className="mt-5 flex items-center gap-2">
-        <div className="flex -space-x-3">
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage src="https://github.com/shadcn.png" alt="@shadcn" />
-            <AvatarFallback>CN</AvatarFallback>
-          </Avatar>
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
-            <AvatarFallback>LR</AvatarFallback>
-          </Avatar>
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
-            <AvatarFallback>LR</AvatarFallback>
-          </Avatar>
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage src="https://github.com/leerob.png" alt="@leerob" />
-            <AvatarFallback>LR</AvatarFallback>
-          </Avatar>
-          <Avatar className="size-[40px] border border-white">
-            <AvatarImage
-              src="https://github.com/evilrabbit.png"
-              alt="@evilrabbit"
-            />
-            <AvatarFallback>ER</AvatarFallback>
-          </Avatar>
-        </div>
-
-        <div>
-          <div className="flex items-center gap-1">
-            {Array.from({ length: 5 }, (_, index) => (
-              <Star key={index} fill="#FFC600" color="#FFC600" size={13} />
+          <div className="space-y-[10px] mt-3 mb-[5rem] lg:mb-[7rem]">
+            {[
+              "Verified surrogate profiles",
+              "Basic profile creation and listing",
+              "3 monthly surrogate matches",
+              "Secure in-platform messaging",
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CircleCheckBig className="text-[#5E5E8D]" />
+                <span className="text-[#5E5E8D] text-[16px] lg:text-[20px]">
+                  {item}
+                </span>
+              </div>
             ))}
           </div>
-
-          <p className="text-[10px] font-[400]">from 70+ happy customers</p>
+          <GradientButton text="Begin with Starter" />
         </div>
-      </div>
 
-      <div className="bg-white rounded-[100px] my-7">
-        <button
-          className={`rounded-[100px] text-black px-5 py-2 ${
-            active === 0 ? "bg-[#0E0E55] text-white" : ""
-          }`}
-          onClick={() => setActive(0)}
-        >
-          Yearly
-        </button>
-        <button
-          className={`rounded-[100px] text-black px-5 py-2 ${
-            active === 1 ? "bg-[#0E0E55] text-white" : ""
-          }`}
-          onClick={() => setActive(1)}
-        >
-          Monthly
-        </button>
-      </div>
+        {/* Premium Plan */}
+        <div className="bg-gradient-to-r from-[#CDCDFB] via-100% via-[#F5DDFF] rounded-[30px] p-[20px] lg:p-[30px] h-fit relative">
+          <div className="flex justify-between gap-5 items-center">
+            <div className="text-[#080833] text-[16px] bg-white w-fit rounded-[14px] py-3 px-5">
+              VIP Plan
+            </div>
+            <div className="bg-gradient-to-r from-[#FFFFFF] to-[#FCDF78] rounded-bl-[30px] flex items-center gap-[5px] absolute top-0 right-0 rounded-tr-[30px] p-[20px]">
+              <p className="text-[#945016] text-[16px]">Most Popular</p>
+              <CircleCheckBig className="text-[#C56A1D]" />
+            </div>
+          </div>
 
-      <div className="flex flex-col lg:flex-row items-center gap-8">
-        <PriceCard
-          features={["One month subscription", "Benefit One", "Benefit One"]}
-          price="92,000"
-          description="Perfect for Parents"
-          checkmarkColor="#737373"
-          category="Personal"
-          buttonText="Subscribe to Parent Plan"
-        />
+          <p className="my-2 text-[#5E5E8D] text-[13px] lg:text-[16px]">
+            For mothers ready to move faster with full support
+          </p>
+          <p className="text-[#080833] text-[32px] lg:text-[64px] font-[500]">
+            $999/year
+          </p>
 
-        <PriceCard
-          features={[
-            "Unlock all pro features",
-            "Additional profile boosts available.",
-            "Additional profile boosts available.",
-            "Additional profile boosts available.",
-            "One year full support",
-            "Email support",
-          ]}
-          price="200,000"
-          description="Perfect for Surrogates"
-          checkmarkColor="#F6F6F6"
-          category="Standand"
-          buttonText="Subscribe to Surrogate Plan"
-          backgroundColor="#0E0E55"
-          mostPopular={true}
-        />
+          <div className="space-y-[10px] mt-3 mb-[5rem] lg:mb-[10rem]">
+            {[
+              "Unlimited surrogate matches",
+              "Featured profile placement for visibility",
+              "Priority matching with top surrogates",
+              "Dedicated matching advisor",
+              "Access to premium resources and guides",
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CircleCheckBig className="text-[#5E5E8D]" />
+                <span className="text-[#5E5E8D] text-[16px] lg:text-[20px]">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+          <GradientButton text="Go premium" />
+        </div>
 
-        <PriceCard
-          features={["One month subscription", "Benefit One", "Benefit One"]}
-          price="92,000"
-          description="Perfect for Clinics/Agents"
-          checkmarkColor="#737373"
-          category="Pro"
-          buttonText="Subscribe to Pro Plan"
-        />
+        {/* VIP plan  */}
+        <div className="bg-[#FBF8FD] rounded-[30px] p-[20px] lg:p-[30px] h-fit relative">
+          <div className="text-[#080833] text-[16px] bg-gradient-to-r from-[#CDCDFB] to-[#F5DDFF] w-fit rounded-[14px] py-3 px-5">
+            VIP Plan
+          </div>
+          <p className="my-2 text-[#5E5E8D] text-[13px] lg:text-[16px]">
+            For mothers who want the smoothest, fastest, and most supported path
+            to motherhood
+          </p>
+          <p className="text-[#080833] text-[32px] lg:text-[64px] font-[500]">
+            $1,999/year
+          </p>
+
+          <div className="space-y-[10px] mt-3 mb-[5rem] lg:mb-[10rem]">
+            {[
+              "First access to the most compatible surrogates",
+              "One on one guidance throughout your journey",
+              "Exclusive community access and support groups",
+              "Monthly check-ins with out expert advisors",
+              "Access to legal and medical resource partners",
+            ].map((item, index) => (
+              <div key={index} className="flex items-center gap-2">
+                <CircleCheckBig className="text-[#5E5E8D]" />
+                <span className="text-[#5E5E8D] text-[16px] lg:text-[20px]">
+                  {item}
+                </span>
+              </div>
+            ))}
+          </div>
+          <GradientButton text="Choose VIP Experience" />
+        </div>
       </div>
     </div>
   );

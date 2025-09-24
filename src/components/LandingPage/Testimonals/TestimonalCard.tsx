@@ -1,36 +1,22 @@
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
-import { Star } from "lucide-react";
-import React from "react";
 
 interface Props {
   text: string;
   name: string;
-  role: string;
 }
 
 const TestimonalCard = (props: Props) => {
   return (
-    <div
-      style={{
-        boxShadow: "0px 2px 3px 0px rgba(0, 0, 0, 0.12)",
-      }}
-      className="p-5 rounded-[20px] w-fit"
-    >
-      <p className="text-[15px] font-[400] w-[300px]">{props.text}</p>
-      <div className="my-3 flex items-center gap-3">
-        <Avatar className="size-[48px]">
+    <div className="bg-[#FBF8FC] border-2 border-white rounded-[30px] p-5 space-y-5">
+      <p className="text-[#737373] text-[16px] lg:text-{24px]">{props.text}</p>
+      <div className="flex items-center gap-3">
+        <Avatar>
           <AvatarImage src="https://github.com/shadcn.png" />
           <AvatarFallback>CN</AvatarFallback>
         </Avatar>
-        <div className="space-y-1">
-          <h3 className="text-[#0D141C] text-[13px] font-bold">{props.name}</h3>
-          <p className="uppercase text-[10px] font-semibold">{props.role}</p>
-          <div className="flex items-center gap-2">
-            {Array.from({ length: 5 }, (_, index) => (
-              <Star key={index} fill="#FFC600" color="#FFC600" size={12} />
-            ))}
-          </div>
-        </div>
+        <p className="text-[#737373] text-[13px] lg:text-[18px]">
+          {props.name}
+        </p>
       </div>
     </div>
   );
