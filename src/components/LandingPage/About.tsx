@@ -8,12 +8,14 @@ const About = () => {
   return (
     <div className="p-5 lg:p-10 my-10 flex flex-col-reverse lg:flex-row gap-5">
       <div>
-        <h3 className="text-[32px] lg:text-[64px]">About Surro</h3>
-        <p className="text-[20px] lg:text-[32px]">
+        <h3 className="text-[32px] lg:text-[64px] text-[#464646]">
+          About Surro
+        </h3>
+        <p className="text-[20px] lg:text-[32px] text-[#4B4B4B] font-[400]">
           Becoming a parent is a dream, and surrogacy makes it possible for so
           many. Our platform creates a safe, trusted space where intended
           parents and surrogates meet, connect, and begin their shared journey.
-          <span className="text-gray-500 ml-1">
+          <span className="ml-1">
             With guidance and support at every step, we ensure the process is
             clear, caring and secure for everyone involved.
           </span>
@@ -30,7 +32,8 @@ const About = () => {
         alt=""
         width={500}
         height={500}
-        className="w-[470px] h-[550px]"
+        className="lg:w-[650px] lg:h-[650px] w-[500px] h-[500px]"
+        fetchPriority="high"
       />
     </div>
   );
