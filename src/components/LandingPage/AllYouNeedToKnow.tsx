@@ -1,6 +1,6 @@
 import React from "react";
-import StoreButtons from "./StoreButtons";
 import Image from "next/image";
+import StoreButtons from "./StoreButtons";
 
 const AllYouNeedToKnow = () => {
   return (
@@ -16,6 +16,7 @@ const AllYouNeedToKnow = () => {
         width={300}
         height={300}
         className="w-full h-auto"
+        fetchPriority="high"
       />
       <div className="h-3 lg:h-10" />
 

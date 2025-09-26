@@ -148,5 +148,5 @@ button {
 } */
 
 .header-background {
-  background: radial-gradient(circle at center, #ffffff, #f5ddff, #cdcdfb);
+  background: radial-gradient(circle at center, #ffffff 0%,  #ffffff 50%, #f5ddff 105%, #cdcdfb 110%);
 }

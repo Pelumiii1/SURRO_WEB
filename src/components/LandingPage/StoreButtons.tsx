@@ -4,7 +4,7 @@ import { FaApple, FaGooglePlay } from "react-icons/fa";
 
 const StoreButtons = () => {
   return (
-    <div className="lg:flex gap-5  lg:items-center lg:justify-center w-full lg:w-fit space-y-5 lg:space-y-0 ">
+    <div className="lg:flex gap-5 lg:items-center lg:justify-center w-full lg:w-fit space-y-5 lg:space-y-0 ">
       <Button className="bg-gradient-to-r rounded-[100px] from-[#012770] via-[#3651BB] to-[#6C6CD3] text-white h-[45px] text-[13px] font-semibold w-full lg:w-[200px]">
         Get on Playstore <FaGooglePlay />
       </Button>
