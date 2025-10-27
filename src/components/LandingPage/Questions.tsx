@@ -14,17 +14,23 @@ const Questions = () => {
     {
       questions: "Is it free to become a surrogate?",
       answer:
-        "All surrogate profiles go through verification to ensure authenticity and safety",
+        "Yes It is absolutely free, no down payments no upfront just register, get verified and get matched .",
     },
     {
       questions: "What support do you provide  parents?",
       answer:
-        "All surrogate profiles go through verification to ensure authenticity and safety",
+        "24/7 customer service center for assistance of all kind, we are here to serve you in your journey of being a parent",
     },
     {
       questions: "Can I cancel my membership?",
       answer:
-        "All surrogate profiles go through verification to ensure authenticity and safety",
+        "Everyone has the liberty to delete their account anytime ,  as long as they no longer need our services.",
+    },
+    {
+      questions:
+        "How Safe is my data and profile and how does it affect my privacy?",
+      answer:
+        "Here at Surrosantara, we put your privacy first, you have all it takes to control how people see you on the platform.",
     },
   ];
 
