@@ -148,5 +148,16 @@ button {
 } */
 
 .header-background {
-  background: radial-gradient(circle at center, #ffffff 0%,  #ffffff 50%, #f5ddff 105%, #cdcdfb 110%);
+  background: radial-gradient(
+    circle at center,
+    #ffffff 0%,
+    #ffffff 50%,
+    #f5ddff 105%,
+    #cdcdfb 110%
+  );
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-padding-top: 10vh;
 }

@@ -29,7 +29,7 @@ const Questions = () => {
   ];
 
   return (
-    <div className="p-5 lg:p-10 my-[2rem] grid">
+    <div id="faq" className="p-5 lg:p-10 my-[2rem] grid">
       <h1 className="text-[#464646] text-[32px] lg:text-[64px] m-auto">
         Questions? We’ve Got Answers
       </h1>

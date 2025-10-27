@@ -8,7 +8,7 @@ const Pricing = () => {
   const [active, setActive] = React.useState(0);
 
   return (
-    <div className="p-5 lg:p-10 my-[2rem]">
+    <div id="pricing" className="p-5 lg:p-10 my-[2rem]">
       <h1 className="text-[48px] font-[400] text-[#464646] leading-[120%] lg:text-center">
         An investment for your dream child
       </h1>

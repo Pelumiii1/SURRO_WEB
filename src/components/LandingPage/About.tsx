@@ -6,7 +6,10 @@ import StoreButtons from "./StoreButtons";
 
 const About = () => {
   return (
-    <div className="p-5 lg:p-10 my-10 flex flex-col-reverse lg:flex-row gap-5">
+    <div
+      id="about"
+      className="p-5 lg:p-10 my-10 flex flex-col-reverse lg:flex-row gap-5"
+    >
       <div>
         <h3 className="text-[32px] lg:text-[64px] text-[#464646]">
           About Surro
