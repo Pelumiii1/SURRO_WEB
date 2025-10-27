@@ -3,7 +3,7 @@ import StoreButtons from "./StoreButtons";
 
 const HeroSection = () => {
   return (
-    <div className="bg-white p-5">
+    <div id="home" className="bg-white p-5">
       <div className="header-background rounded-[40px] p-5 h-full">
         <div className="flex flex-col items-center justify-between h-full">
           <div className="lg:w-[580px] flex flex-col items-center justify-center space-y-5 pt-10">

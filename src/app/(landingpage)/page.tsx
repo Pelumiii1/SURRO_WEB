@@ -23,7 +23,7 @@ export default function LandingPage() {
       <HowItWorks />
       <GetMatched />
       <BecomeAnAgent />
-      <Pricing />
+      {/* <Pricing /> */}
       <Testimonals />
       <AllYouNeedToKnow />
       <Questions />

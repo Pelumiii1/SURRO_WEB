@@ -23,7 +23,7 @@ const Navabar = () => {
 
       {/* links  */}
       <div className="lg:flex items-end gap-[55px] font-semibold text-[16px] hidden">
-        <Link href="/">Home</Link>
+        <Link href="/#home">Home</Link>
         <Link href="/#about">About</Link>
         <Link href="/#how-it-works">How it works</Link>
         <Link href="/#faq">FAQs</Link>
