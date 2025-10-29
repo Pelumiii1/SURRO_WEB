@@ -3,7 +3,7 @@ import StepCard from "./StepCard";
 
 const HowItWorks = () => {
   return (
-    <div className="p-5 lg:p-10 mt-[2rem]">
+    <div id="how-it-works" className="p-5 lg:p-10 mt-[2rem]">
       <div className="w-full lg:w-[450px] mx-auto">
         <h2 className="text-[32px] lg:text-[64px] text-[#464646] font-bold text-center">
           How It Works.
